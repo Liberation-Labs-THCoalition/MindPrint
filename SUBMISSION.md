@@ -59,3 +59,7 @@ https://github.com/Liberation-Labs-THCoalition/MindPrint
 3. Layer sampling stride is fixed per session, not randomized per query
 4. Model-signature mode uses static architecture lookup rather than learned signatures
 5. Deception detection signals are strongest above 7B scale — smaller models produce narrower geometric variance
+
+## Patent
+
+Patent Pending — The methods described in this repository, including KV-cache geometric fingerprinting for inference verification, are the subject of a pending patent application. Liberation Labs / THCoalition.

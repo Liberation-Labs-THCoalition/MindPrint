@@ -94,6 +94,10 @@ Built on 5 months of published KV-cache geometric phenomenology:
 
 Liberation Labs / THCoalition / JiminAI
 
+## Patent
+
+Patent Pending — The methods described in this repository, including KV-cache geometric fingerprinting for inference verification, are the subject of a pending patent application. Liberation Labs / THCoalition.
+
 ## License
 
 MIT
