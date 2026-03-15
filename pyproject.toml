@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mindprint"
+version = "0.1.0"
+description = "Verifiable inference via KV-cache geometry — Proof of Mind for decentralized compute"
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.0",
+    "numpy",
+]
+
+[project.optional-dependencies]
+bittensor = [
+    "bittensor>=8.0",
+]
+gpu = [
+    "torch>=2.0",
+    "transformers>=4.40",
+    "accelerate>=0.24",
+    "scipy",
+]
+api = [
+    "fastapi>=0.104",
+    "uvicorn>=0.24",
+]
+dev = [
+    "pytest>=7.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["mindprint*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
