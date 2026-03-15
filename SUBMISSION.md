@@ -1,10 +1,12 @@
-# Hackathon Submission — CacheScope: Proof of Mind
+# Hackathon Submission — MindPrint: Proof of Mind
+
+## Track: Sovereign Infrastructure (Bittensor Challenge)
 
 ## Summary
 
-CacheScope: Proof of Mind is a verifiable inference system that proves AI models performed honest computation — without re-running inference or seeing the query content. It works by extracting a compact geometric fingerprint (a "MindPrint") from a model's KV-cache during inference. Same model + same input + honest computation produces a deterministic 121-byte proof.
+MindPrint is a verifiable inference protocol that proves AI models performed honest computation on decentralized infrastructure — without re-running inference or seeing the query content. It extracts a compact geometric fingerprint (a "MindPrint") from a model's KV-cache during inference. Same model + same input + honest computation produces a deterministic 121-byte proof.
 
-Built for the Bittensor ecosystem, it enables validators to verify miner inference integrity at 17,000x compression compared to raw cache data — detecting model substitution, response caching, censorship routing, and computation shortcuts in real time.
+Built for the Bittensor ecosystem, it enables validators to verify miner inference integrity at 17,000x compression compared to raw cache data — detecting model substitution, response caching, censorship routing, and computation shortcuts. Honest miners earn, dishonest miners earn nothing.
 
 **This is a new build**, created during this hackathon. The underlying research (KV-cache geometric phenomenology) draws on 5 months of published work across two experimental campaigns and 7 model architectures.
 
@@ -27,18 +29,18 @@ Built for the Bittensor ecosystem, it enables validators to verify miner inferen
 - Greedy decode is deterministic; sampled decode requires calibrated tolerance thresholds
 - Miner and validator must agree on quantization scheme for full verification
 
-Full threat model: [THREAT_MODEL.md](https://github.com/Liberation-Labs-THCoalition/CacheScope/blob/main/THREAT_MODEL.md)
+Full threat model: [THREAT_MODEL.md](https://github.com/Liberation-Labs-THCoalition/MindPrint/blob/main/THREAT_MODEL.md)
 
 ## GitHub
 
-https://github.com/Liberation-Labs-THCoalition/CacheScope
+https://github.com/Liberation-Labs-THCoalition/MindPrint
 
 ## Documentation
 
-- [README](https://github.com/Liberation-Labs-THCoalition/CacheScope/blob/main/README.md) — Architecture, quick start, API reference
-- [EXPLAIN.md](https://github.com/Liberation-Labs-THCoalition/CacheScope/blob/main/EXPLAIN.md) — Plain English explanation (2-minute read)
-- [Threat Model](https://github.com/Liberation-Labs-THCoalition/CacheScope/blob/main/THREAT_MODEL.md) — Full security analysis with limitations
-- [Demo Scripts](https://github.com/Liberation-Labs-THCoalition/CacheScope/tree/main/demo) — Interactive TUI, economic simulation, scripted demo
+- [README](https://github.com/Liberation-Labs-THCoalition/MindPrint/blob/main/README.md) — Architecture, quick start, API reference
+- [EXPLAIN.md](https://github.com/Liberation-Labs-THCoalition/MindPrint/blob/main/EXPLAIN.md) — Plain English explanation (2-minute read)
+- [Threat Model](https://github.com/Liberation-Labs-THCoalition/MindPrint/blob/main/THREAT_MODEL.md) — Full security analysis with limitations
+- [Demo Scripts](https://github.com/Liberation-Labs-THCoalition/MindPrint/tree/main/demo) — Interactive TUI, economic simulation, scripted demo
 
 ## How it touches Bittensor
 
@@ -48,7 +50,7 @@ https://github.com/Liberation-Labs-THCoalition/CacheScope
 - Two verification modes: full (re-run inference) and model-signature (verify model identity without seeing query — privacy-preserving)
 - EMA-based miner scoring compatible with Bittensor's weight-setting mechanism
 - Live subnet (netuid 2) running on local Bittensor chain with funded wallets
-- Full Yuma Consensus economic simulation showing honest miners earning and cheaters earning zero
+- Full Yuma Consensus economic simulation: 41/41/18 emission split, honest miner earns τ2.46 vs cheater τ0.00 after 6 tempos (24,600x reward ratio)
 
 ## Current Limitations
 
