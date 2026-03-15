@@ -8,7 +8,7 @@ MindPrint is a verifiable inference protocol that proves AI models performed hon
 
 Built for the Bittensor ecosystem, it enables validators to verify miner inference integrity at 17,000x compression compared to raw cache data — detecting model substitution, response caching, censorship routing, and computation shortcuts. Honest miners earn, dishonest miners earn nothing.
 
-**This is a new build**, created during this hackathon. The underlying research (KV-cache geometric phenomenology) draws on 5 months of published work across two experimental campaigns and 7 model architectures.
+**This is a new build**, created during this hackathon. The underlying research (KV-cache geometric phenomenology) draws on 5 months of published work across (as of this event) three experimental campaigns and 7 model architectures.
 
 ## Threat Model
 
